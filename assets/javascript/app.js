@@ -24,6 +24,36 @@ var questions = [
         d: "Lake Shore Drive"
     },
     answer: "d"
-    }
+    },
+    {
+    prompt: "Who has the best Deep Dish Pizza?",
+    options:{
+        a: "Lou Malnatis",
+        b: "Peqouds",
+        c: "Giordanos",
+        d: "Gino's East"
+    },
+    answer: "a"
+    },
+{
+    prompt: "Tallest Building in Chicago?",
+    options:{
+        a: "Willis Tower",
+        b: "John Hancock Tower",
+        c: "Sears Tower",
+        d: "Trump Tower"
+    },
+    answer: "c"
+    },
+{
+    prompt: "What town is not in the City of Chicago?",
+    options:{
+        a: "Wicker Park",
+        b: "Streeterville",
+        c: "South Loop",
+        d: "Chicago Heights"
+    },
+    answer: "d"
+    },
 ]
 console.log(questions)
