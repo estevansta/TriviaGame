@@ -56,4 +56,6 @@ var questions = [
     answer: "d"
     },
 ]
-console.log(questions)
+console.log(questions);
+
+
