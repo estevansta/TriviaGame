@@ -3,6 +3,14 @@
 // change screen to reveal correct answer questions, incorrect, # of unanswered
 // timer that counts down as you start the game; closes game when time is up
 
+
+
+// creating constant containers for the quiz questions, the sumbit button and the results
+
+const quizContainer = document.getElementById("quiz");
+const submitButton = document.getElementById('submit');
+const resultsContainer = document.getElementById('results');
+
 //setting up quetions in an array of objects/questions with an answer key
 var questions = [
     {
@@ -57,5 +65,7 @@ var questions = [
     },
 ]
 console.log(questions);
+
+
 
 
