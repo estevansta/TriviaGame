@@ -4,10 +4,11 @@
 // timer that counts down as you start the game; closes game when time is up
 
 //setting up quetions in an array of objects/questions with an answer key
-var questions = [
-    { prompt: "What year did the Chicago Fire take place?"
-    
+var questions = 
+    { prompt: "What year did the Chicago Fire take place?",
+      options: "(a) 1860, (b) 1871, (c) 1900, (d) 1920",
+      answer: "'(b) 1871'"
     }
     
-];
-console.log(questions)
+;
+console.log(questions.options)
