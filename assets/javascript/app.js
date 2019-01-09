@@ -5,10 +5,14 @@
 
 //setting up quetions in an array of objects/questions with an answer key
 var questions = 
-    { prompt: "What year did the Chicago Fire take place?",
-      options: "(a) 1860, (b) 1871, (c) 1900, (d) 1920",
-      answer: "'(b) 1871'"
-    }
-    
-;
-console.log(questions.options)
+    {
+    prompt: "What year did the Chicago Fire take place?",
+    options:{
+        a: "1860",
+        b: "1871",
+        c: "1900",
+        d: "1920"
+    },
+    answer: "b"
+    };
+console.log(questions)
