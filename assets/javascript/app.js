@@ -76,9 +76,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
         var output = [];
         var options;
         // begin for loop for each question in the array, show each set of available options
-
         for(var i=0; i<questions.length; i++){
-
             options = [];
             // for each available option
             for(letter in questions[i].options){
@@ -89,14 +87,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
                     + letter + ': '
                     + questions[i].options[letter]
                 + '</label>'
-                );
+                    );
                 }
                 output.push(
                     '<div class="question">' + questions[i].question + '</div>'
                     + '<div class="options">' + options.join('') + '</div>'
                 );
                 quizContainer.innerHTML = output.join('');
-            
         }
     }
     // declare function that shows the results
