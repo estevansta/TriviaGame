@@ -68,30 +68,35 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 //declare the function to generate the quiz and its contents; 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
     // declare function that shows the questions
     function showQuestions(questions, quizContainer){
+
         // declare an empty array for the stored output and answer options delcaration
         var output = [];
         var options;
         // begin for loop for each question in the array, show each set of available options
+
         for(var i=0; i<questions.length; i++){
+
             options = [];
             // for each available option
             for(letter in questions[i].options){
                 // add an html tag for a radio button
                 options.push(
 				'<label>'
-                + '<input type="radio" name="question'+i+'" value="'+letter+'">'
-                + letter + ': '
-                + questions[i].options[letter]
+                    + '<input type="radio" name="question'+i+'" value="'+letter+'">'
+                    + letter + ': '
+                    + questions[i].options[letter]
                 + '</label>'
                 );
+                }
                 output.push(
                     '<div class="question">' + questions[i].question + '</div>'
                     + '<div class="options">' + options.join('') + '</div>'
                 );
                 quizContainer.innerHTML = output.join('');
-            }
+            
         }
     }
     // declare function that shows the results
