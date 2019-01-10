@@ -4,9 +4,9 @@
 // timer that counts down as you start the game; closes game when time is up
 
 //setting up quetions in an array of objects/questions with an answer key
-var questions = [
+var myQuestions = [
     {
-    prompt: "What year did the Chicago Fire take place?",
+   question: "What year did the Chicago Fire take place?",
     options:{
         a: "1860",
         b: "1871",
@@ -16,7 +16,7 @@ var questions = [
     answer: "b"
     },
     {
-    prompt: "What does LSD Stand for?",
+    question: "What does LSD Stand for?",
     options:{
         a: "Lysergic acid diethylamide",
         b: "Laugh Smile and Dance",
@@ -26,7 +26,7 @@ var questions = [
     answer: "d"
     },
     {
-    prompt: "Who has the best Deep Dish Pizza?",
+    question: "Who has the best Deep Dish Pizza?",
     options:{
         a: "Lou Malnatis",
         b: "Peqouds",
@@ -36,7 +36,7 @@ var questions = [
     answer: "a"
     },
 {
-    prompt: "Tallest Building in Chicago?",
+    question: "Tallest Building in Chicago?",
     options:{
         a: "Willis Tower",
         b: "John Hancock Tower",
@@ -46,7 +46,7 @@ var questions = [
     answer: "c"
     },
 {
-    prompt: "What town is not in the City of Chicago?",
+    question: "What town is not in the City of Chicago?",
     options:{
         a: "Wicker Park",
         b: "Streeterville",
@@ -56,7 +56,7 @@ var questions = [
     answer: "d"
     },
 ]
-    console.log(questions);
+    console.log(myQuestions);
 
 // creating constant containers for the quiz questions, the sumbit button and the results
 
@@ -64,20 +64,9 @@ var quizContainer = document.getElementById("quiz");
 var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
-generateQuiz(questions, quizContainer, resultsContainer, submitButton);
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 //call the function to generate the quiz
-function generateQuiz(prompt,quizContainer, resultsContainer, submitButton){
-    function showQuestions(prompt, quizContainer){
-        var output = [];
-        var answers;
-        
-    }
-    showQuestions(prompt, quizContainer);
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+
 }
-
-
-
-
-
-
