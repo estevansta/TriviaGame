@@ -1,10 +1,7 @@
-// multiple choice question trivia game
-// only allowed to choose one answer
-// user sumbits form via button and we tell them correctly answered questions, incorrect, # of unanswered
-
 
 //setting up quetions in an array of objects/questions with an answer key
-    
+// multiple choice question trivia game
+// only allowed to choose one answer
 
 var myQuestions = [
     {
@@ -119,6 +116,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     showQuestions(questions, quizContainer);
     
 }
+
+
+// user sumbits form via button and we tell them correctly answered questions, incorrect, # of unanswered
+
+
+
+
 // timer that counts down as you start the game; closes game when time is up
 //timer
 
