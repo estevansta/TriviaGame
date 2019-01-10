@@ -4,6 +4,8 @@
 // timer that counts down as you start the game; closes game when time is up
 
 //setting up quetions in an array of objects/questions with an answer key
+    
+
 var myQuestions = [
     {
    question: "What year did the Chicago Fire take place?",
@@ -65,8 +67,8 @@ var resultsContainer = document.getElementById('results');
 var submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
-
 //declare the function to generate the quiz and its contents; 
+
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
     // declare function that shows the questions
@@ -97,9 +99,21 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
                 quizContainer.innerHTML = output.join('');
         }
     }
-    // declare function that shows the results
+    // declare function that shows the results and records the answers
     function showResults(questions, quizContainer, resultsContainer){
-
+            var answerContainers = quizContainer.querySelectorAll('.options');
+            //user inputs for answers and correct answers
+            var userAnswer = '';
+            var numCorrect = 0;
+            for(var i=0; i<questions.length; i++){
+                // allows us to have an empty answer
+                userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+                // if user answers correctly +1 to the result
+                if(userAnswer===questions[i].answer){
+                    numCorrect++;
+                }
+            }
+            resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
     }
     // call to the showQuestions function
     showQuestions(questions, quizContainer);
