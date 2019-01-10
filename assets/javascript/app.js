@@ -119,7 +119,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     showQuestions(questions, quizContainer);
     // call the submit button with an onclick function thow shows the results
     submitButton.onclick = function(){
-		showResults(questions, quizContainer, resultsContainer);
+	showResults(questions, quizContainer, resultsContainer);
     }
 }
 
