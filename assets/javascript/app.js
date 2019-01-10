@@ -80,7 +80,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
             options = [];
             // for each available option
             for(letter in questions[i].options){
-                // add an html tag for a radio button
+                // add an html tag for a radio button to show question + adding the options below
                 options.push(
 				'<label>'
                     + '<input type="radio" name="question'+i+'" value="'+letter+'">'
@@ -89,8 +89,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
                 + '</label>'
                     );
                 }
+                // allows to have options sit 
                 output.push(
-                    '<div class="question">' + questions[i].question + '</div>'
+                    '<h2><div class="question">' + questions[i].question + '</div></h2>'
                     + '<div class="options">' + options.join('') + '</div>'
                 );
                 quizContainer.innerHTML = output.join('');
@@ -98,6 +99,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
     }
     // declare function that shows the results
     function showResults(questions, quizContainer, resultsContainer){
+
     }
     // call to the showQuestions function
     showQuestions(questions, quizContainer);
