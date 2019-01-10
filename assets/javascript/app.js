@@ -1,15 +1,7 @@
 // multiple choice question trivia game
 // only allowed to choose one answer
-// change screen to reveal correct answer questions, incorrect, # of unanswered
+// user sumbits form via button and we tell them correctly answered questions, incorrect, # of unanswered
 // timer that counts down as you start the game; closes game when time is up
-
-
-
-// creating constant containers for the quiz questions, the sumbit button and the results
-
-const quizContainer = document.getElementById("quiz");
-const submitButton = document.getElementById('submit');
-const resultsContainer = document.getElementById('results');
 
 //setting up quetions in an array of objects/questions with an answer key
 var questions = [
@@ -64,7 +56,27 @@ var questions = [
     answer: "d"
     },
 ]
-console.log(questions);
+    console.log(questions);
+
+// creating constant containers for the quiz questions, the sumbit button and the results
+
+var quizContainer = document.getElementById("quiz");
+var resultsContainer = document.getElementById('results');
+var submitButton = document.getElementById('submit');
+
+generateQuiz(questions, quizContainer, resultsContainer, submitButton);
+
+//call the function to generate the quiz
+function generateQuiz(prompt,quizContainer, resultsContainer, submitButton){
+    function showQuestions(prompt, quizContainer){
+        var output = [];
+        var answers;
+        
+    }
+    showQuestions(prompt, quizContainer);
+}
+
+
 
 
 
