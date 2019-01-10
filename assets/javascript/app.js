@@ -66,7 +66,18 @@ var submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
-//call the function to generate the quiz
+//declare the function to generate the quiz and its contents; 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
-
+    // declare function that shows the questions
+    function showQuestions(questions, quizContainer){
+    }
+    // declare function that shows the results
+    function showResults(questions, quizContainer, resultsContainer){
+    }
+    // call to the showQuestions function
+    showQuestions(questions, quizContainer);
+    // call the submit button with an onclick function thow shows the results
+    submitButton.onclick = function(){
+		showResults(questions, quizContainer, resultsContainer);
+    }
 }
