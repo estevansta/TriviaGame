@@ -116,7 +116,8 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
         
         // call to the showQuestions function
         showQuestions(questions, quizContainer);
-//*********************************errror below */
+//*********************************errror below some how unable to get my submit buttont to work and display results as well as
+// using the timer function at the same time.
         // submitButton.onclick = function(){
         //     showResults(questions, quizContainer, resultsContainer);
         // }
