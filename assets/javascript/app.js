@@ -57,7 +57,7 @@ var myQuestions = [
 ]
     console.log(myQuestions);
 
-// creating constant containers for the quiz questions, the sumbit button and the results
+// creating containers for the quiz questions, the sumbit button and the results
 
 var quizContainer = document.getElementById("quiz");
 var resultsContainer = document.getElementById('results');
@@ -111,9 +111,15 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
                 }
             }
             resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+            
     }
-    // call to the showQuestions function
-    showQuestions(questions, quizContainer);
+        
+        // call to the showQuestions function
+        showQuestions(questions, quizContainer);
+//*********************************errror below */
+        // submitButton.onclick = function(){
+        //     showResults(questions, quizContainer, resultsContainer);
+        // }
     
 }
 
@@ -126,25 +132,25 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 // timer that counts down as you start the game; closes game when time is up
 //timer
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+            display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
+            if (--timer < 0) {
+                timer = duration;
+            }
+        }, 1000);
+    }
 
-window.onload = function () {
-    var oneMinutes = 60 * 1,
-        display = document.querySelector('#time');
-    startTimer(oneMinutes, display);
-};
+    window.onload = function () {
+        var oneMinutes = 60 * 1,
+            display = document.querySelector('#time');
+        startTimer(oneMinutes, display);
+    };
